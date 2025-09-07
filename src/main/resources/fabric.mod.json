@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "yacp",
+	"version": "${version}",
+	"name": "Yet Another Chunk Pregen",
+	"description": "Another take on chunk pregeneration, for the different means and needs.",
+	"authors": [
+		"FEX___96"
+	],
+	"contact": {
+		"homepage": "https://fexcraft.net/",
+		"sources": "https://github.com/Fexcraft/YACP"
+	},
+	"license": "https://fexcraft.net/license?id=mods",
+	"icon": "assets/yacp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.fexcraft.mod.yacp.Yacp"
+		]
+	},
+	"mixins": [
+		"yacp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fcl": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

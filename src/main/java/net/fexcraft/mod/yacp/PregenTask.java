@@ -26,6 +26,8 @@ public class PregenTask {
 	private int exist;
 	private int proc;
 	private int save;
+	public float total;
+	public float curr;
 
 	public PregenTask(File folder, File file, JsonMap map){
 		this.root = folder;
@@ -50,6 +52,7 @@ public class PregenTask {
 			cx = sx;
 			cz = sz;
 		}
+		total = (ex - sx) * (ez - sz);
 	}
 
 	public void save(){
@@ -97,6 +100,7 @@ public class PregenTask {
 			incrIdx();
 			epa[0]++;
 		}
+		curr = (cz - sz) * (ex - sx) + cx;
 		save++;
 		if(save >= 16){
 			save();

@@ -90,7 +90,7 @@ public class Yacp implements ModInitializer {
 				accu -= 1;
 			}
 			if(++ticks > 20){
-				LOGGER.info("Procesed " + proc + "ck/s and skipped " + skip + " in ~" + tickms + "ms. " + diff + "/" + incr + "");
+				LOGGER.info("Procesed " + proc + "ck/s and skipped " + skip + " in ~" + tickms + "ms. " + ((TASK.curr / TASK.total) * 100) + "% (" + TASK.curr + "/" + TASK.total + ")");
 				tickms = 0;
 				ticks = 0;
 				proc = 0;
